@@ -13,35 +13,35 @@ use phpnt\animateCss\AnimateCssAsset;
 
 class BootstrapNotify extends Widget
 {
-    private $icon;
-    private $icon_type          = 'class';
-    private $title;
-    private $message;
-    private $url;
-    private $target;
+    public $icon;
+    public $icon_type          = 'class';
+    public $title;
+    public $message;
+    public $url;
+    public $target;
 
-    private $element            = 'body';
-    private $position           = 'fixed';
-    private $type               = 'info';
-    private $allow_dismiss      = 1;
-    private $newest_on_top      = 0;
-    private $showProgressbar    = 0;
+    public $element            = 'body';
+    public $position           = 'fixed';
+    public $type               = 'info';
+    public $allow_dismiss      = 1;
+    public $newest_on_top      = 0;
+    public $showProgressbar    = 0;
 
-    private $placement_from     = 'top';
-    private $placement_align    = 'right';
+    public $placement_from     = 'top';
+    public $placement_align    = 'right';
 
-    private $offset             = 20;
-    private $offset_x           = 20;
-    private $offset_y           = 20;
-    private $spacing            = 10;
-    private $z_index            = 1031;
-    private $timer              = 1000;
-    private $delay              = 5000;
-    private $url_target         = '_blank';
-    private $mouse_over         = 0;
+    public $offset             = 20;
+    public $offset_x           = 20;
+    public $offset_y           = 20;
+    public $spacing            = 10;
+    public $z_index            = 1031;
+    public $timer              = 1000;
+    public $delay              = 5000;
+    public $url_target         = '_blank';
+    public $mouse_over         = 0;
 
-    private $animate_enter      = 'animated fadeInDown';
-    private $animate_exit       = 'animated fadeOutUp';
+    public $animate_enter      = 'animated fadeInDown';
+    public $animate_exit       = 'animated fadeOutUp';
 
     // {0} = type
     // {1} = title
@@ -49,7 +49,7 @@ class BootstrapNotify extends Widget
     // {3} = url
     // {4} = target
 
-    private $template           = '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert"><button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button><span data-notify="icon"></span><span data-notify="title">{1}</span><span data-notify="message">{2}</span><div class="progress" data-notify="progressbar"><div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div></div><a href="{3}" target="{4}" data-notify="url"></a></div>';
+    public $template           = '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert"><button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button><span data-notify="icon"></span><span data-notify="title">{1}</span><span data-notify="message">{2}</span><div class="progress" data-notify="progressbar"><div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div></div><a href="{3}" target="{4}" data-notify="url"></a></div>';
 
     public function init()
     {
